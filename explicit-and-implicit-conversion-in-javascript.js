@@ -19,14 +19,24 @@ Use console.log() to clearly show the before-and-after type conversions.
 */
 
 
-let result = "5" - 2;
+let result = "5" - 2;  // This is Correct as 5-2 is 3. THis is an example of implicit conversion
 console.log("The result is: " + result);
 
-let isValid = Boolean("false");
+let isValid = Boolean(false); // I fixed this so it does not run the statement as it is False.
 if (isValid) {
     console.log("This is valid!");
 }
 
 let age = "25";
-let totalAge = age + 5;
+let realAge= Number(age);  // I converted the string to a number so it does the proper calcualtion instead of a string concatenation
+let totalAge = realAge + 5;
 console.log("Total Age: " + totalAge);
+
+
+console.log("5"*"10"); // THis is implicit as the computer automatically converts these strings to numbers
+
+let isLaughing=true;
+console.log(isLaughing.toString()); //I explicity made this boolean convert to a string.
+
+let num=NaN;
+console.log(Boolean(num)); // Using a edge case, the variable humber is false becuase it is not a number
